@@ -11,7 +11,7 @@ GetOptions(
     'e=s' => \my $expression,
 );
 
-my $d = HTTP::Daemon->new or die;
+my $d = HTTP::Daemon->new( LocalAddr => q(127.0.0.1) ) or die;
 
 print $d->url, "\n";
 
